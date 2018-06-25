@@ -11,6 +11,7 @@ import static org.libsodium.jni.NaCl.sodium;
 /**
  * FlutterSodiumPlugin
  */
+@SuppressWarnings("unchecked")
 public class FlutterSodiumPlugin implements MethodCallHandler {
   /**
    * Plugin registration.
@@ -807,8 +808,6 @@ public class FlutterSodiumPlugin implements MethodCallHandler {
 
   private void sodium_version_string(MethodCall call, Result result)
   {
-    // FIXME: sodium_version_string throws in libsodium-jni
-    // for now version is hardcoded
-    result.success("1.0.16");
+    result.success(sodium().sodium_version_string());
   }
 }
