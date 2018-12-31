@@ -11,6 +11,7 @@ import static org.libsodium.jni.NaCl.sodium;
 /**
  * FlutterSodiumPlugin
  */
+@SuppressWarnings("unchecked")
 public class FlutterSodiumPlugin implements MethodCallHandler, CryptoTask {
     /**
      * Plugin registration.
