@@ -4,10 +4,9 @@ description: Demonstrates how to use the flutter_sodium plugin.
 dependencies:
   flutter:
     sdk: flutter
-  
-  convert: "^2.0.1"
-  
-  cupertino_icons: ^0.1.0
+    
+  cupertino_icons: ^0.1.2
+  url_launcher: ^3.0.0
 
 dev_dependencies:
   flutter_test:
@@ -18,3 +17,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  fonts:
+    - family: RobotoMono
+      fonts:
+        - asset: assets/fonts/RobotoMono-Regular.ttf

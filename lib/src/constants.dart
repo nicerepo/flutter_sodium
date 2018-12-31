@@ -1,3 +1,24 @@
+const int crypto_aead_chacha20poly1305_KEYBYTES = 32;
+const int crypto_aead_chacha20poly1305_NSECBYTES = 0;
+const int crypto_aead_chacha20poly1305_NPUBBYTES = 8;
+const int crypto_aead_chacha20poly1305_ABYTES = 16;
+const int crypto_aead_chacha20poly1305_MESSAGEBYTES_MAX =
+    4294967295 - crypto_aead_chacha20poly1305_ABYTES;
+
+const int crypto_aead_chacha20poly1305_ietf_KEYBYTES = 32;
+const int crypto_aead_chacha20poly1305_ietf_NSECBYTES = 0;
+const int crypto_aead_chacha20poly1305_ietf_NPUBBYTES = 12;
+const int crypto_aead_chacha20poly1305_ietf_ABYTES = 16;
+const int crypto_aead_chacha20poly1305_ietf_MESSAGEBYTES_MAX =
+    4294967295 - crypto_aead_chacha20poly1305_ietf_ABYTES;
+
+const int crypto_aead_xchacha20poly1305_ietf_KEYBYTES = 32;
+const int crypto_aead_xchacha20poly1305_ietf_NSECBYTES = 0;
+const int crypto_aead_xchacha20poly1305_ietf_NPUBBYTES = 24;
+const int crypto_aead_xchacha20poly1305_ietf_ABYTES = 16;
+const int crypto_aead_xchacha20poly1305_ietf_MESSAGEBYTES_MAX =
+    4294967295 - crypto_aead_xchacha20poly1305_ietf_ABYTES;
+
 const int crypto_auth_BYTES = crypto_auth_hmacsha512256_BYTES;
 const int crypto_auth_KEYBYTES = crypto_auth_hmacsha512256_KEYBYTES;
 
@@ -25,6 +46,13 @@ const int crypto_box_curve25519xsalsa20poly1305_BEFORENMBYTES = 32;
 const int crypto_box_curve25519xsalsa20poly1305_NONCEBYTES = 24;
 const int crypto_box_curve25519xsalsa20poly1305_MACBYTES = 16;
 const int crypto_box_curve25519xsalsa20poly1305_BOXZEROBYTES = 16;
+
+const int crypto_box_curve25519xchacha20poly1305_SEEDBYTES = 32;
+const int crypto_box_curve25519xchacha20poly1305_PUBLICKEYBYTES = 32;
+const int crypto_box_curve25519xchacha20poly1305_SECRETKEYBYTES = 32;
+const int crypto_box_curve25519xchacha20poly1305_BEFORENMBYTES = 32;
+const int crypto_box_curve25519xchacha20poly1305_NONCEBYTES = 24;
+const int crypto_box_curve25519xchacha20poly1305_MACBYTES = 16;
 
 const int crypto_generichash_BYTES_MIN = crypto_generichash_blake2b_BYTES_MIN;
 const int crypto_generichash_BYTES_MAX = crypto_generichash_blake2b_BYTES_MAX;
@@ -126,7 +154,8 @@ const int crypto_pwhash_argon2id_OPSLIMIT_SENSITIVE = 4;
 const int crypto_pwhash_argon2id_MEMLIMIT_SENSITIVE = 1073741824;
 
 const int crypto_scalarmult_BYTES = crypto_scalarmult_curve25519_BYTES;
-const int crypto_scalarmult_SCALARBYTES = crypto_scalarmult_curve25519_SCALARBYTES;
+const int crypto_scalarmult_SCALARBYTES =
+    crypto_scalarmult_curve25519_SCALARBYTES;
 
 const int crypto_scalarmult_curve25519_BYTES = 32;
 const int crypto_scalarmult_curve25519_SCALARBYTES = 32;
